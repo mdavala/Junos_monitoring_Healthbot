@@ -1,0 +1,7 @@
+notification = """{
+                 "notification-name": "test_webhook",
+                 "description": "simple webhook testing from healthbot", 
+                 "http-post": {
+                      "url": "http://*.*.*.*:5000/"
+                  }
+            }"""
