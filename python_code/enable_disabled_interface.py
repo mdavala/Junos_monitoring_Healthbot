@@ -11,8 +11,8 @@ def get_junos_details(dev):
 	healthbot_pwd = 'Juniper!1'
 	healthbot_server = '100.123.35.0'
 	headers = { 'Accept' : 'application/json', 'Content-Type' : 'application/json' }
-	url = 'https://'+ healthbot_server + ':8080/api/v1/device/' + dev +'/'
-	r = requests.get(url, auth=HTTPBasicAuth(healthbot_user, healthbot_pwd), headers=headers, verify=False)
+	url = 'https://api-server:9000/api/v1/device/' + dev +'/'
+	r = requests.get(url, headers=headers, verify=False)
 	return r.json()
 
 def enable_interface(int, **kwargs):
