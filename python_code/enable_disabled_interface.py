@@ -16,7 +16,7 @@ def get_junos_details(dev):
 	return r.json()
 
 def enable_interface(int, **kwargs):
-	junos_details = get_junos_details(kwargs["device_id"])
+	junos_details = get_junos_details(kwargs['device_id'])
 	junos_host = junos_details['host']
 	junos_user = junos_details['authentication']['password']['username']
 	# junos_password = junos_details['authentication']['password']['password']
