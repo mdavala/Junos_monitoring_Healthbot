@@ -12,7 +12,7 @@ def get_junos_details(dev):
 	#healthbot_pwd = 'Juniper!1'
 	#healthbot_server = '100.123.35.0'
 	headers = { 'Accept' : 'application/json', 'Content-Type' : 'application/json' }
-	url = 'https://api-server:9000/api/v1/device/' + dev +'/'
+	url = 'http://api-server:9000/api/v1/device/' + dev +'/'
 	r = requests.get(url, headers=headers, verify=False)
 	return r.json()
 
